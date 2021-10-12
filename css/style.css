@@ -44,13 +44,13 @@ header {
     align-items: center;
 }
 
-.ms_container_jumbo > div span {
+.ms_container_jumbo > div span, #about .ms_container > div span {
     border: solid 2px white;
     width: 200px;
     margin: 0 30px;
 }
 
-.ms_container_jumbo > div .bi.bi-star-fill {
+.ms_container_jumbo > div .bi.bi-star-fill, #about .ms_container > div .bi.bi-star-fill {
     color: white;
 }
 
@@ -81,7 +81,7 @@ header {
     font-size: 50px;
 }
 
-#portfolio .ms_container > div, .jumbotron .ms_container_jumbo > div {
+#portfolio .ms_container > div, .jumbotron .ms_container_jumbo > div, #about .ms_container > div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,8 +131,25 @@ header {
 #about {
     background-color: #1abc9c;
     width: 100%;
-    /* debug */
-    height: 550px;
+    padding: 80px 0 50px;
+}
+
+#about .ms_container {
+    margin-bottom: 15px;
+}
+
+#about h2 {
+    color: white;
+}
+
+#about p {
+    color: white;
+    font-size: 20px;
+}
+
+.ms_btn {
+    font-size: 30px;
+    margin-top: 20px;
 }
 
 /* Sezione info */
@@ -172,11 +189,6 @@ footer .container .row {
     border: solid 1px black;
 }
 
-.tesst_debugs {
-    background-color: darkgoldenrod;
-    height: 80px;
-}
-
 .tesst_debugss {
     background-color: deepskyblue;
     height: 200px;
@@ -200,7 +212,7 @@ footer .container .row {
 
 /* Tablet (md) */
 @media all and (min-width: 768px) and (max-width: 991px) {
-    .ms_container > div span, .ms_container_jumbo > div span {
+    .ms_container > div span, .ms_container_jumbo > div span, #about .ms_container > div span {
         width: 120px;
     }
 
@@ -213,6 +225,15 @@ footer .container .row {
 
     .jumbotron p {
         font-size: 20px;
+    }
+
+    /* About */
+    #about p {
+        font-size: 21px;
+    }
+
+    .ms_btn {
+        font-size: 25px;
     }
 }
 
@@ -237,11 +258,30 @@ footer .container .row {
     .jumbotron p {
         font-size: 20px;
     }
+
+    /* About */
+    #about .ms_container > div span {
+        width: 60px;
+        margin: 0 5px;
+    }
+
+    #about p {
+        font-size: 22px;
+    }
+
+    .ms_btn {
+        font-size: 25px;
+    }
 }
 
 /* Extra large (xl) */
 @media all and (min-width: 1200px) {
     .jumbotron p {
         font-size: 32px;
+    }
+
+    /* About */
+    #about p {
+        font-size: 27px;
     }
 }
